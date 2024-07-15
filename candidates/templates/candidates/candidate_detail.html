@@ -1,0 +1,29 @@
+{% extends "system/base.html" %}
+{% load my_tags %}
+{% block content %}
+<div class="row text-center">
+        <div class="col-6">
+            <div class="card mb-4 box-shadow">
+                <img src="{{ object.photo | media_filter }}" alt="">
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">{{ object.full_name }}</h1>
+                    <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+                        <li>Дата рождения: {{ object.date_of_birth }}</li>
+                        <li>Место рождения: {{ object.place_of_birth }}</li>
+                        <li>Образования: {{ object.universities }}</li>
+                        <li>Степени образования: {{ object.degrees }}</li>
+                        <li>Рабочие места: {{ object.work_experience }}</li>
+                        <li>Опыт в политике: {{ object.political_experience }}</li>
+                        <li>Цели и задачи на предстоящий срок: {{ object.goals_and_objectives }}</li>
+                        <li>Проекты и инициативы на предстоящий срок: {{ object.projects_and_initiatives }}</li>
+                        <li>Награды и признания: {{ object.awards_and_recognitions }}</li>
+                        <li>Основные достижения: {{ object.key_achievements }}</li>
+                        <li>Официальный сайт: {{ object.official_website }}</li>
+                        <li>Социальные сети: {{ object.social_media_links }}</li>
+                    </ul>
+                    <a class="btn btn-lg btn-block btn-outline-primary" href="#" role="button">Проголосовать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'system/base.html'%}
+{% block content %}
+<h2>{% if form.instance.pk %}Редактировать{% else %}Создать{% endif %} кандидата</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+  </form>
+{% endblock %}
